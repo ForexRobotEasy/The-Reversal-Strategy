@@ -1,0 +1,79 @@
+
+//+------------------------------------------------------------------+
+//|                                               The Reversal Strategy |
+//|                                           https://forexroboteasy.com |
+//|                                           Developed by Forex Robot Easy Team |
+//+------------------------------------------------------------------+
+
+#property strict
+
+// Trade Entry Optimization
+void IdentifyBSL_SSL()
+{
+    // Code to identify BSL and SSL levels on white charts
+}
+
+void DetermineEntryPoints()
+{
+    // Code to determine optimal trade entry points based on BSL and SSL indications
+}
+
+double SuggestEntryLevels(double price)
+{
+    // Function to suggest entry levels when the price touches the identified BSL
+    return (price * 1.01); // Suggest entry level 1% above the identified BSL
+}
+
+// Trade Decision-making
+bool PredictPriceMovement()
+{
+    // Code to analyze price movements and predict if it will move towards the SSL level
+    
+    return true; // Predicted movement towards the SSL level
+}
+
+void AdviseTrade()
+{
+    // Function to advise traders to take the trade when the price is predicted to move towards the SSL
+}
+
+double CalculatePotentialProfits(double entryPrice)
+{
+    // Function to calculate potential profits at the SSL level
+    return (entryPrice * 1.02); // Calculate potential profits as 2% above the entry price
+}
+
+// Technical Setup
+void Setup()
+{
+    // Code to facilitate the setup process for the Reversal Strategy Forex software
+}
+
+void ConfigureSoftware()
+{
+    // Necessary functions to configure the software according to user preferences
+}
+
+// Main function
+void OnTick()
+{
+    IdentifyBSL_SSL();
+    DetermineEntryPoints();
+    
+    double currentPrice = MarketInfo(Symbol(), MODE_ASK);
+    double suggestedEntryLevel = SuggestEntryLevels(currentPrice);
+    
+    if (currentPrice >= suggestedEntryLevel)
+    {
+        if (PredictPriceMovement())
+        {
+            AdviseTrade();
+            
+            double potentialProfits = CalculatePotentialProfits(suggestedEntryLevel);
+            
+            // Code for executing the trade and managing the position
+            
+        }
+    }
+}
+
